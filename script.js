@@ -1,4 +1,4 @@
-const API_BASE_URL = window.EXPLOREEASE_API_URL || "http://127.0.0.1:8000";
+const API_BASE_URL = "https://exploreease-smart-tourism-guide-1.onrender.com";
 const IMG_FALLBACK = "assets/images/placeholder.svg";
 
 let destinations = [];
