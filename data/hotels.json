@@ -1,0 +1,98 @@
+[
+  {
+    "name": "The Leela Palace",
+    "rating": 4.9,
+    "price": "₹18,000/night",
+    "amenities": [
+      "Pool",
+      "Spa",
+      "WiFi",
+      "Breakfast"
+    ],
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Taj Fort Aguada",
+    "rating": 4.8,
+    "price": "₹15,000/night",
+    "amenities": [
+      "Sea View",
+      "Pool",
+      "WiFi",
+      "Restaurant"
+    ],
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "ITC Mughal",
+    "rating": 4.7,
+    "price": "₹11,500/night",
+    "amenities": [
+      "Spa",
+      "Garden",
+      "Parking",
+      "Breakfast"
+    ],
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Radisson Blu Mysore",
+    "rating": 4.6,
+    "price": "₹8,500/night",
+    "amenities": [
+      "Pool",
+      "Gym",
+      "WiFi",
+      "Bar"
+    ],
+    "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "The Oberoi Amarvilas",
+    "rating": 4.9,
+    "price": "₹25,000/night",
+    "amenities": [
+      "Luxury View",
+      "Spa",
+      "Pool",
+      "Dining"
+    ],
+    "image": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "W Goa",
+    "rating": 4.7,
+    "price": "₹14,500/night",
+    "amenities": [
+      "Beach Access",
+      "Pool",
+      "Music",
+      "WiFi"
+    ],
+    "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Mayfair Darjeeling",
+    "rating": 4.6,
+    "price": "₹9,200/night",
+    "amenities": [
+      "Mountain View",
+      "Heater",
+      "WiFi",
+      "Dining"
+    ],
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Rambagh Palace",
+    "rating": 4.9,
+    "price": "₹22,000/night",
+    "amenities": [
+      "Royal Stay",
+      "Spa",
+      "Pool",
+      "Fine Dining"
+    ],
+    "image": "https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=900&q=80"
+  }
+]

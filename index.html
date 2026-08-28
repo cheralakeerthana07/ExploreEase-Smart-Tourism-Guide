@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Tourism Guide</title>
+  <meta
+    name="description"
+    content="Smart Tourism Guide - Discover India's top destinations, hotels, restaurants, travel tips, and more."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-content">
+      <div class="plane"><i class="fa-solid fa-plane"></i></div>
+      <h2>Smart Tourism Guide</h2>
+      <p>Loading your travel experience...</p>
+    </div>
+  </div>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-earth-asia"></i></span>
+        <span>Smart Tourism Guide</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#hotels">Hotels</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#coupons">Coupons</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#tips">Travel Tips</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="auth-area" id="authArea"></div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div id="welcomeBanner" class="welcome-banner"></div>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text glass">
+          <span class="tag">Explore Incredible India</span>
+          <h1>Your Smart Travel Companion for Discovering India</h1>
+          <p>
+            Find iconic destinations, top-rated hotels, local restaurants, travel tips,
+            and detailed guides - all in one beautiful tourism website.
+          </p>
+          <div class="hero-search">
+            <div class="search-group">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                id="heroSearch"
+                placeholder="Search destinations like Goa, Jaipur, Kerala..."
+              />
+            </div>
+            <button id="searchBtn" class="btn btn-primary">Search</button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <h3>12+</h3>
+              <p>Top Destinations</p>
+            </div>
+            <div>
+              <h3>8+</h3>
+              <p>Hotels</p>
+            </div>
+            <div>
+              <h3>8+</h3>
+              <p>Restaurants</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card glass floating-card">
+          <img
+            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80"
+            alt="Taj Mahal"
+           loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+          <div class="hero-card-info">
+            <h3>Taj Mahal</h3>
+            <p>Agra, Uttar Pradesh</p>
+            <span><i class="fa-solid fa-star"></i> 4.9</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section featured">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Destinations</span>
+          <h2>Places You Shouldn't Miss</h2>
+          <p>Handpicked destinations loved by travelers across India.</p>
+        </div>
+        <div class="featured-grid">
+          <div class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=900&q=80"
+              alt="Jaipur"
+             loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+            <div class="featured-overlay">
+              <h3>Jaipur</h3>
+              <p>The Pink City of royal palaces and forts.</p>
+            </div>
+          </div>
+          <div class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80"
+              alt="Kerala"
+             loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+            <div class="featured-overlay">
+              <h3>Kerala</h3>
+              <p>Backwaters, greenery, beaches, and Ayurveda.</p>
+            </div>
+          </div>
+          <div class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80"
+              alt="Goa"
+             loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+            <div class="featured-overlay">
+              <h3>Goa</h3>
+              <p>Sunny beaches, nightlife, and Portuguese charm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section popular">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Popular Places</span>
+          <h2>Traveler Favorites</h2>
+          <p>Most searched and loved tourist destinations.</p>
+        </div>
+        <div class="popular-grid">
+          <div class="info-card">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <h3>Hill Stations</h3>
+            <p>Relax in cool weather and scenic mountain views.</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <h3>Beach Escapes</h3>
+            <p>Enjoy golden sands, sunsets, and water activities.</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-landmark-dome"></i>
+            <h3>Historical Sites</h3>
+            <p>Discover forts, temples, monuments, and heritage.</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-tree-city"></i>
+            <h3>Nature Trips</h3>
+            <p>Explore forests, waterfalls, wildlife, and peace.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section why-us">
+      <div class="container why-wrapper">
+        <div class="why-image">
+          <img
+            src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=900&q=80"
+            alt="Travelers enjoying a trip"
+           loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+        </div>
+        <div class="why-content">
+          <span class="section-tag">Why Choose Us</span>
+          <h2>Travel Smarter, Safer, and Better</h2>
+          <div class="why-list">
+            <div class="why-item">
+              <i class="fa-solid fa-route"></i>
+              <div>
+                <h4>Curated Destinations</h4>
+                <p>Explore India's most famous and meaningful travel spots.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <h4>Stay Recommendations</h4>
+                <p>Find comfortable hotels with useful amenities and pricing.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <h4>Food & Local Flavors</h4>
+                <p>Discover popular restaurants and regional cuisines nearby.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fa-solid fa-shield-heart"></i>
+              <div>
+                <h4>Practical Travel Tips</h4>
+                <p>Get safety, packing, emergency, and seasonal guidance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="destinations" class="section destinations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Destinations</span>
+          <h2>Explore India's Famous Tourist Places</h2>
+          <p>Search and filter destinations by name or state.</p>
+        </div>
+        <div class="filter-bar glass">
+          <div class="filter-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              id="destinationSearch"
+              placeholder="Search by place or state..."
+            />
+          </div>
+          <select id="stateFilter">
+            <option value="all">All States</option>
+          </select>
+        </div>
+        <div id="destinationsGrid" class="destinations-grid"></div>
+      </div>
+    </section>
+    <section id="destination-details" class="section destination-details">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Destination Details</span>
+          <h2>Know Before You Go</h2>
+          <p>Detailed travel information for your selected destination.</p>
+        </div>
+        <div id="detailsContainer" class="details-card glass">
+          <div class="details-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>Select a destination</h3>
+            <p>Click "View Details" on any destination card to see full information here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="hotels" class="section hotels">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hotels</span>
+          <h2>Comfortable Stays for Every Traveler</h2>
+          <p>Beautiful hotel recommendations with ratings and amenities.</p>
+        </div>
+        <div id="hotelsGrid" class="card-grid"></div>
+      </div>
+    </section>
+    <section id="restaurants" class="section restaurants">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Restaurants</span>
+          <h2>Taste Local and Global Flavors</h2>
+          <p>Popular dining options with cuisine and location access.</p>
+        </div>
+        <div id="restaurantsGrid" class="card-grid"></div>
+      </div>
+    </section>
+    <section id="coupons" class="section coupons">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Coupons &amp; Offers</span>
+          <h2>Save More on Your Journey</h2>
+          <p>Use these offers to make your stays, meals, and experiences more rewarding.</p>
+        </div>
+        <div id="couponsGrid" class="coupon-grid"></div>
+      </div>
+    </section>
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gallery</span>
+          <h2>Travel Moments Across India</h2>
+          <p>Responsive image gallery with smooth hover effects.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523544545175-92e04b96d26b?auto=format&fit=crop&w=900&q=80" alt="India travel 1"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=900&q=80" alt="India travel 2"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="India travel 3"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80" alt="India travel 4"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80" alt="India travel 5"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="India travel 6"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80" alt="India travel 7"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=80" alt="India travel 8"  loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" /></div>
+        </div>
+      </div>
+    </section>
+    <section id="tips" class="section tips">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Travel Tips</span>
+          <h2>Useful Tips for a Better Journey</h2>
+          <p>Plan wisely and travel confidently.</p>
+        </div>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+            <h3>Packing Tips</h3>
+            <p>Pack light clothes for summer, layered outfits for winter, power bank, ID proof, medicines, and comfortable footwear.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fa-solid fa-user-shield"></i>
+            <h3>Safety Tips</h3>
+            <p>Keep digital and physical copies of documents, avoid isolated places late at night, and use verified transport options.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fa-solid fa-phone-volume"></i>
+            <h3>Emergency Numbers</h3>
+            <p>National Emergency: 112, Police: 100, Ambulance: 108, Fire: 101.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fa-solid fa-hands-praying"></i>
+            <h3>Local Customs</h3>
+            <p>Respect dress codes in religious places, remove shoes where required, and be mindful of local traditions and photography rules.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h3>Best Travel Seasons</h3>
+            <p>October to March is generally ideal for many destinations in India due to pleasant weather and festival seasons.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fa-solid fa-map"></i>
+            <h3>Planning Tips</h3>
+            <p>Book hotels early during holidays, check local weather, and create a basic itinerary for smooth travel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section about">
+      <div class="container about-wrapper">
+        <div class="about-content">
+          <span class="section-tag">About Us</span>
+          <h2>Smart Tourism Guide for Modern Travelers</h2>
+          <p>
+            Smart Tourism Guide is a responsive travel website project designed to help users
+            discover famous tourist destinations in India, along with hotels, restaurants,
+            travel tips, and helpful details in a clean and modern interface.
+          </p>
+          <p>
+            This mini project demonstrates front-end web development using HTML5, CSS3, and
+            JavaScript without any backend or database.
+          </p>
+          <div class="about-points">
+            <span><i class="fa-solid fa-check"></i> Clean UI Design</span>
+            <span><i class="fa-solid fa-check"></i> Mobile Responsive</span>
+            <span><i class="fa-solid fa-check"></i> Interactive Features</span>
+            <span><i class="fa-solid fa-check"></i> Deployment Ready</span>
+          </div>
+        </div>
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80"
+            alt="Travel planning"
+           loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Contact</span>
+          <h2>Plan Your Next Adventure</h2>
+          <p>Send us your travel query through the contact form.</p>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-form-card glass">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" />
+                <small class="error" id="nameError"></small>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" />
+                <small class="error" id="emailError"></small>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Enter subject" />
+                <small class="error" id="subjectError"></small>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+                <small class="error" id="messageError"></small>
+              </div>
+              <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="contact-card glass">
+              <h3>Contact Info</h3>
+              <p><i class="fa-solid fa-location-dot"></i> New Delhi, India</p>
+              <p><i class="fa-solid fa-envelope"></i> info@smarttourismguide.com</p>
+              <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+            <div class="contact-card glass map-card">
+              <h3>Find Us</h3>
+              <iframe
+                src="https://www.google.com/maps?q=India%20Gate,%20New%20Delhi&z=13&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="contact-card glass social-card">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Smart Tourism Guide</h3>
+        <p>
+          A modern tourism website project to explore destinations, hotels, restaurants,
+          and smart travel information across India.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Destinations</h4>
+        <ul>
+          <li><a href="#destinations">Goa</a></li>
+          <li><a href="#destinations">Jaipur</a></li>
+          <li><a href="#destinations">Kerala</a></li>
+          <li><a href="#destinations">Agra</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Get inspired for your next journey.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter email" />
+          <button class="btn btn-secondary" id="newsletterBtn">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Smart Tourism Guide. All rights reserved.</p>
+    </div>
+  </footer>
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <div id="toast" class="toast">Action completed</div>
+
+  <div id="authModalOverlay" class="modal-overlay">
+    <div class="modal glass">
+      <button class="modal-close" id="authModalClose" aria-label="Close login window">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-tabs">
+        <button class="modal-tab active" id="loginTabBtn" data-tab="login">Login</button>
+        <button class="modal-tab" id="signupTabBtn" data-tab="signup">Sign Up</button>
+      </div>
+      <form id="loginForm" class="auth-form" novalidate>
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password" />
+        </div>
+        <small class="error" id="loginError"></small>
+        <button type="submit" class="btn btn-primary full-width">Login</button>
+        <p class="modal-switch">New to ExploreEase? <a href="#" data-switch="signup">Create an account</a></p>
+      </form>
+      <form id="signupForm" class="auth-form hidden-form" novalidate>
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Enter your name" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Create a password (min 6 characters)" autocomplete="new-password" />
+        </div>
+        <small class="error" id="signupError"></small>
+        <button type="submit" class="btn btn-primary full-width">Create Account</button>
+        <p class="modal-switch">Already have an account? <a href="#" data-switch="login">Login</a></p>
+      </form>
+      <p class="modal-note">
+        <i class="fa-solid fa-circle-info"></i>
+        Demo login for this mini project — your name, email, and password are stored only in this browser (localStorage), never sent to a server.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

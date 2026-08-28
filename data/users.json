@@ -1,0 +1,12 @@
+[
+  {
+    "user_id": "demo-priya",
+    "name": "Priya Sharma",
+    "favorites": [1, 3, 9]
+  },
+  {
+    "user_id": "demo-arjun",
+    "name": "Arjun Mehta",
+    "favorites": [2, 5, 7]
+  }
+]

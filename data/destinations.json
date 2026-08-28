@@ -1,0 +1,325 @@
+[
+  {
+    "id": 1,
+    "name": "Taj Mahal",
+    "state": "Uttar Pradesh",
+    "description": "One of the Seven Wonders of the World, famous for its white marble beauty.",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "October to March",
+    "entryFee": "₹50 for Indians, ₹1100 for foreign tourists",
+    "timings": "6:00 AM - 6:30 PM (Closed on Friday)",
+    "hotels": [
+      "The Oberoi Amarvilas",
+      "ITC Mughal",
+      "Radisson Hotel Agra"
+    ],
+    "restaurants": [
+      "Pinch of Spice",
+      "Esphahan",
+      "Joney's Place"
+    ],
+    "thingsToDo": [
+      "Explore the main mausoleum",
+      "Visit Mehtab Bagh",
+      "See Agra Fort nearby"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "description": "The Pink City known for royal palaces, forts, colorful bazaars, and heritage.",
+    "rating": 4.8,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Hawa_Mahal%2C_Jaipur.jpg",
+    "bestTime": "November to February",
+    "entryFee": "Varies by monument",
+    "timings": "Most attractions open from 9:00 AM - 5:00 PM",
+    "hotels": [
+      "Rambagh Palace",
+      "Trident Jaipur",
+      "Holiday Inn Jaipur"
+    ],
+    "restaurants": [
+      "Chokhi Dhani",
+      "Spice Court",
+      "LMB"
+    ],
+    "map": "https://www.google.com/maps/search/?api=1&query=Jaipur+Rajasthan",
+    "thingsToDo": [
+      "Visit Amer Fort",
+      "Explore City Palace",
+      "Shop in Johari Bazaar"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Goa",
+    "state": "Goa",
+    "description": "India's beach paradise with nightlife, water sports, churches, and vibrant culture.",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "November to February",
+    "entryFee": "Mostly free beaches, charges for activities",
+    "timings": "Beaches open all day; attractions vary",
+    "hotels": [
+      "Taj Fort Aguada",
+      "W Goa",
+      "Cidade de Goa"
+    ],
+    "restaurants": [
+      "Pousada by the Beach",
+      "Thalassa",
+      "Gunpowder"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Goa)",
+    "thingsToDo": [
+      "Relax at Baga Beach",
+      "Try water sports",
+      "Visit Basilica of Bom Jesus"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Kerala Backwaters",
+    "state": "Kerala",
+    "description": "A peaceful network of lagoons, lakes, and canals ideal for houseboat stays.",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "September to March",
+    "entryFee": "No entry fee; houseboat charges vary",
+    "timings": "Accessible throughout the day",
+    "hotels": [
+      "Kumarakom Lake Resort",
+      "Coconut Lagoon",
+      "The Zuri Kumarakom"
+    ],
+    "restaurants": [
+      "Thaff",
+      "Rice Boat",
+      "The Waterside"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Kerala+Backwaters)",
+    "thingsToDo": [
+      "Houseboat cruise",
+      "Bird watching",
+      "Enjoy authentic Kerala cuisine"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Mysore Palace",
+    "state": "Karnataka",
+    "description": "An architectural gem and royal residence known for its grand lighting and design.",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "October to February",
+    "entryFee": "₹100 approx for adults",
+    "timings": "10:00 AM - 5:30 PM",
+    "hotels": [
+      "Radisson Blu Mysore",
+      "Royal Orchid Metropole",
+      "Sandesh The Prince"
+    ],
+    "restaurants": [
+      "RRR",
+      "The Old House",
+      "Vinayaka Mylari"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Mysore+Palace)",
+    "thingsToDo": [
+      "See illuminated palace",
+      "Visit nearby zoo",
+      "Explore Devaraja Market"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Varanasi",
+    "state": "Uttar Pradesh",
+    "description": "One of the world's oldest living cities, famous for ghats, spirituality, and Ganga Aarti.",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "October to March",
+    "entryFee": "Free for ghats and temples",
+    "timings": "Open throughout the day",
+    "hotels": [
+      "BrijRama Palace",
+      "Taj Ganges",
+      "Hotel Alka"
+    ],
+    "restaurants": [
+      "Kashi Chat Bhandar",
+      "Brown Bread Bakery",
+      "Aum Cafe"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Varanasi)",
+    "thingsToDo": [
+      "Attend Ganga Aarti",
+      "Boat ride on the Ganges",
+      "Visit Kashi Vishwanath Temple"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Manali",
+    "state": "Himachal Pradesh",
+    "description": "A scenic hill station surrounded by snow-capped mountains and adventure activities.",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "October to June",
+    "entryFee": "No entry fee",
+    "timings": "Open all day",
+    "hotels": [
+      "The Himalayan",
+      "Snow Valley Resorts",
+      "Manu Allaya"
+    ],
+    "restaurants": [
+      "Johnson's Cafe",
+      "Cafe 1947",
+      "Mount View"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Manali)",
+    "thingsToDo": [
+      "Visit Solang Valley",
+      "Try paragliding",
+      "Explore Hidimba Temple"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Darjeeling",
+    "state": "West Bengal",
+    "description": "Famous for tea gardens, toy train rides, and panoramic Himalayan views.",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "March to May, October to December",
+    "entryFee": "Varies by attraction",
+    "timings": "Most places open from morning till evening",
+    "hotels": [
+      "Mayfair Darjeeling",
+      "Summit Swiss Heritage",
+      "The Elgin"
+    ],
+    "restaurants": [
+      "Keventer's",
+      "Glenary's",
+      "Sonam's Kitchen"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Darjeeling)",
+    "thingsToDo": [
+      "Ride the toy train",
+      "Visit Tiger Hill",
+      "Explore tea estates"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Udaipur",
+    "state": "Rajasthan",
+    "description": "The City of Lakes known for romantic views, palaces, and cultural beauty.",
+    "rating": 4.8,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/City_Palace%2C_Udaipur.jpg",
+    "bestTime": "September to March",
+    "entryFee": "Varies by attraction",
+    "timings": "Most attractions open from 9:00 AM - 6:00 PM",
+    "hotels": [
+      "The Leela Palace",
+      "Taj Lake Palace",
+      "Trident Udaipur"
+    ],
+    "restaurants": [
+      "Ambrai",
+      "Upre",
+      "Jheel's Rooftop"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Udaipur)",
+    "thingsToDo": [
+      "Boat ride on Lake Pichola",
+      "Visit City Palace",
+      "Watch sunset at Fateh Sagar"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Hampi",
+    "state": "Karnataka",
+    "description": "A UNESCO World Heritage Site with magnificent ruins, temples, and boulder landscapes.",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "October to February",
+    "entryFee": "Varies by monument",
+    "timings": "6:00 AM - 6:00 PM",
+    "hotels": [
+      "Evolve Back Kamalapura Palace",
+      "Heritage Resort Hampi",
+      "Clarks Inn"
+    ],
+    "restaurants": [
+      "Mango Tree",
+      "Laughing Buddha",
+      "Gopi Guesthouse Restaurant"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Hampi)",
+    "thingsToDo": [
+      "Visit Virupaksha Temple",
+      "Explore stone chariot",
+      "Coracle ride"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Amritsar",
+    "state": "Punjab",
+    "description": "Home to the Golden Temple, a spiritual and cultural landmark of India.",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "October to March",
+    "entryFee": "Golden Temple is free",
+    "timings": "Open throughout the day",
+    "hotels": [
+      "Hyatt Regency Amritsar",
+      "Ramada Amritsar",
+      "Fairfield by Marriott"
+    ],
+    "restaurants": [
+      "Bharawan Da Dhaba",
+      "Kesar Da Dhaba",
+      "Beera Chicken House"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Amritsar+Golden+Temple)",
+    "thingsToDo": [
+      "Visit Golden Temple",
+      "Watch Wagah Border ceremony",
+      "Taste Amritsari kulcha"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Rann of Kutch",
+    "state": "Gujarat",
+    "description": "A stunning white salt desert famous for surreal landscapes and Rann Utsav.",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80",
+    "bestTime": "November to February",
+    "entryFee": "Festival and permit charges may apply",
+    "timings": "Open during festival timings and daytime visits",
+    "hotels": [
+      "Rann Utsav Tent City",
+      "Regenta Resort Bhuj",
+      "Hotel Prince"
+    ],
+    "restaurants": [
+      "Santushti Shakes",
+      "Umiyaji Dining Hall",
+      "Noorani Restaurant"
+    ],
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Rann+of+Kutch)",
+    "thingsToDo": [
+      "Visit White Desert",
+      "Enjoy Rann Utsav",
+      "Experience local handicrafts"
+    ]
+  }
+]

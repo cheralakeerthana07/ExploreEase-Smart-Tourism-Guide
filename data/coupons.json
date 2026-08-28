@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "code": "TAJSTAY10",
+    "title": "10% Off Hotel Booking in Agra",
+    "discount": "10% OFF",
+    "description": "Get 10% off when you book any partner hotel near the Taj Mahal.",
+    "category": "hotel",
+    "site_id": 1,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 2,
+    "code": "PINKCITY15",
+    "title": "15% Off Selected Restaurants in Jaipur",
+    "discount": "15% OFF",
+    "description": "Enjoy 15% off your bill at selected restaurants around Jaipur.",
+    "category": "restaurant",
+    "site_id": 2,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 3,
+    "code": "GOABEACH20",
+    "title": "20% Off Beach Resort Stays",
+    "discount": "20% OFF",
+    "description": "Save on beachside resort bookings in Goa this season.",
+    "category": "hotel",
+    "site_id": 3,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 4,
+    "code": "BACKWATERS12",
+    "title": "12% Off Houseboat Stays",
+    "discount": "12% OFF",
+    "description": "Get 12% off houseboat bookings in the Kerala backwaters.",
+    "category": "hotel",
+    "site_id": 4,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 5,
+    "code": "MYSOREHERITAGE10",
+    "title": "10% Off Heritage Tour Add-ons",
+    "discount": "10% OFF",
+    "description": "10% off guided heritage tour add-ons near Mysore Palace.",
+    "category": "general",
+    "site_id": 5,
+    "expiry": "2026-11-30",
+    "demo": true
+  },
+  {
+    "id": 6,
+    "code": "VARANASIGHAT10",
+    "title": "10% Off Ganga Aarti Boat Rides",
+    "discount": "10% OFF",
+    "description": "10% off evening boat rides for the Ganga Aarti in Varanasi.",
+    "category": "general",
+    "site_id": 6,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 7,
+    "code": "MANALIADVENTURE15",
+    "title": "15% Off Adventure Activities",
+    "discount": "15% OFF",
+    "description": "15% off paragliding and adventure activities in Manali.",
+    "category": "general",
+    "site_id": 7,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 8,
+    "code": "UDAIPURLAKE10",
+    "title": "10% Off Lake Palace Boat Tours",
+    "discount": "10% OFF",
+    "description": "10% off Lake Pichola boat tour bookings in Udaipur.",
+    "category": "general",
+    "site_id": 9,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 9,
+    "code": "WEEKEND15",
+    "title": "Weekend Tourist Special",
+    "discount": "15% OFF",
+    "description": "Enjoy 15% off on weekend getaway hotel bookings across India.",
+    "category": "general",
+    "site_id": null,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 10,
+    "code": "STUDENT20",
+    "title": "Student Special Offer",
+    "discount": "20% OFF",
+    "description": "Verified students get an extra 20% off on select entry tickets nationwide.",
+    "category": "general",
+    "site_id": null,
+    "expiry": "2026-12-31",
+    "demo": true
+  },
+  {
+    "id": 11,
+    "code": "FOODIE10",
+    "title": "10% Off at Partner Restaurants",
+    "discount": "10% OFF",
+    "description": "10% off your bill at any partner restaurant listed on ExploreEase.",
+    "category": "restaurant",
+    "site_id": null,
+    "expiry": "2026-12-31",
+    "demo": true
+  }
+]

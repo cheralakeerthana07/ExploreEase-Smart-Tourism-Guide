@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Thalassa",
+    "cuisine": "Greek, Seafood",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
+    "map": "https://www.google.com/maps/search/?api=1&query=Thalassa+Goa"
+  },
+  {
+    "name": "Keventer's",
+    "cuisine": "Cafe, Breakfast",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Keventers+Darjeeling)"
+  },
+  {
+    "name": "Spice Court",
+    "cuisine": "Rajasthani, North Indian",
+    "rating": 4.5,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/City_Palace%2C_Udaipur.jpg",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Spice+Court+Jaipur)"
+  },
+  {
+    "name": "Rice Boat",
+    "cuisine": "Kerala, Seafood",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Rice+Boat+Kerala)"
+  },
+  {
+    "name": "Bharawan Da Dhaba",
+    "cuisine": "Punjabi",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Bharawan+Da+Dhaba+Amritsar)"
+  },
+  {
+    "name": "Cafe 1947",
+    "cuisine": "Italian, Cafe",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1515669097368-22e68427d265?auto=format&fit=crop&w=900&q=80",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Cafe+1947+Manali)"
+  },
+  {
+    "name": "Ambrai",
+    "cuisine": "Rajasthani, Indian",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Ambrai+Udaipur)"
+  },
+  {
+    "name": "Pinch of Spice",
+    "cuisine": "North Indian, Mughlai",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+    "map": "[google.com](https://www.google.com/maps/search/?api=1&query=Pinch+of+Spice+Agra)"
+  }
+]

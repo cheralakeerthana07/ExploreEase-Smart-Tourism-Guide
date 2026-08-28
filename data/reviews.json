@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "site_id": 1,
+    "user_name": "Ananya Rao",
+    "rating": 5,
+    "comment": "The Taj Mahal is even more breathtaking in person. Go early morning to beat the crowds!",
+    "date": "2026-05-12"
+  },
+  {
+    "id": 2,
+    "site_id": 1,
+    "user_name": "Rohit Verma",
+    "rating": 4,
+    "comment": "Stunning monument, but it gets very crowded by mid-morning. Plan accordingly.",
+    "date": "2026-04-02"
+  },
+  {
+    "id": 3,
+    "site_id": 2,
+    "user_name": "Meera Iyer",
+    "rating": 5,
+    "comment": "Jaipur's forts and bazaars are a photographer's dream. Loved every bit of it.",
+    "date": "2026-03-21"
+  },
+  {
+    "id": 4,
+    "site_id": 3,
+    "user_name": "Karan Shah",
+    "rating": 4,
+    "comment": "Great beaches and nightlife. Baga was a bit touristy, but still fun.",
+    "date": "2026-06-18"
+  },
+  {
+    "id": 5,
+    "site_id": 3,
+    "user_name": "Sara Thomas",
+    "rating": 5,
+    "comment": "Perfect relaxing getaway with amazing seafood by the beach.",
+    "date": "2026-02-09"
+  },
+  {
+    "id": 6,
+    "site_id": 4,
+    "user_name": "Vikram Nair",
+    "rating": 5,
+    "comment": "The houseboat stay on the backwaters was one of the most peaceful experiences ever.",
+    "date": "2026-01-27"
+  },
+  {
+    "id": 7,
+    "site_id": 9,
+    "user_name": "Divya Menon",
+    "rating": 5,
+    "comment": "Udaipur is magical at sunset. The lake views from the palace are unforgettable.",
+    "date": "2026-05-30"
+  },
+  {
+    "id": 8,
+    "site_id": 11,
+    "user_name": "Harpreet Singh",
+    "rating": 5,
+    "comment": "Visiting the Golden Temple was a deeply moving experience. Very well maintained.",
+    "date": "2026-04-15"
+  }
+]
