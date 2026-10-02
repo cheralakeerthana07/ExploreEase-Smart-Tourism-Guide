@@ -1,4 +1,5 @@
 import json
+from contextlib import asynccontextmanager
 from datetime import date
 from pathlib import Path
 from typing import Optional
@@ -8,13 +9,23 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 
+import db
+
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    db.init_db()
+    yield
+
 
 app = FastAPI(
     title="ExploreEase Smart Tourism Guide API",
     description="Backend API powering the ExploreEase smart tourism guide & trip planner.",
     version="1.1.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -181,6 +192,92 @@ def get_user_favorites(user_id: str):
     all_sites = load_json("destinations.json")
     favorite_sites = [site for site in all_sites if site["id"] in user["favorites"]]
     return {"user_id": user_id, "name": user["name"], "favorites": favorite_sites}
+
+
+# ---------------------------------------------------------------------------
+# User Authentication (Neon PostgreSQL)
+# ---------------------------------------------------------------------------
+class UserSignup(BaseModel):
+    name: str = Field(..., min_length=2, max_length=100)
+    email: str = Field(..., min_length=5, max_length=255)
+    password: str = Field(..., min_length=6, max_length=128)
+
+    @field_validator("name", "email")
+    @classmethod
+    def strip_whitespace(cls, value: str) -> str:
+        cleaned = value.strip()
+        if not cleaned:
+            raise ValueError("Field cannot be blank.")
+        return cleaned
+
+
+class UserLogin(BaseModel):
+    email: str = Field(..., min_length=5, max_length=255)
+    password: str = Field(..., min_length=1)
+
+
+@app.get("/auth/status")
+def auth_status():
+    """Verify if NeonDB is configured and reachable."""
+    configured = bool(db.get_db_url())
+    return {
+        "database": "Neon PostgreSQL",
+        "configured": configured,
+        "message": "Connected to NeonDB" if configured else "DATABASE_URL is not set in .env",
+    }
+
+
+@app.post("/auth/signup", status_code=201)
+def signup_user(user: UserSignup):
+    if not db.get_db_url():
+        raise HTTPException(
+            status_code=503,
+            detail="Database not configured. Please add your NeonDB DATABASE_URL to the .env file.",
+        )
+    try:
+        existing = db.find_user_by_email(user.email)
+        if existing:
+            raise HTTPException(status_code=400, detail="An account with this email already exists.")
+
+        new_user = db.create_user(name=user.name, email=user.email, password=user.password)
+        return {
+            "message": "Registration successful",
+            "user": {
+                "id": new_user["id"],
+                "name": new_user["name"],
+                "email": new_user["email"],
+            },
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database error: {str(e)}")
+
+
+@app.post("/auth/login")
+def login_user(creds: UserLogin):
+    if not db.get_db_url():
+        raise HTTPException(
+            status_code=503,
+            detail="Database not configured. Please add your NeonDB DATABASE_URL to the .env file.",
+        )
+    try:
+        user = db.find_user_by_email(creds.email)
+        if not user or not db.verify_password(creds.password, user["password_hash"]):
+            raise HTTPException(status_code=401, detail="Invalid email or password.")
+
+        return {
+            "message": "Login successful",
+            "user": {
+                "id": user["id"],
+                "name": user["name"],
+                "email": user["email"],
+            },
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database error: {str(e)}")
 
 
 # ---------------------------------------------------------------------------

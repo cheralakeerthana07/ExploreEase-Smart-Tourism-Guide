@@ -1,4 +1,9 @@
-const API_BASE_URL = "https://exploreease-smart-tourism-guide-1.onrender.com";
+const API_BASE_URL =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1" ||
+  window.location.protocol === "file:"
+    ? "http://127.0.0.1:8000"
+    : "https://exploreease-smart-tourism-guide-1.onrender.com";
 const IMG_FALLBACK = "assets/images/placeholder.svg";
 
 let destinations = [];
@@ -288,47 +293,55 @@ function renderCoupons() {
    an httpOnly cookie, and keep Auth.getCurrentUser()/logout()/isLoggedIn()
    working the same way so the rest of the UI doesn't need to change.
    ========================================================================== */
-const USERS_KEY = "exploreease_users";
 const SESSION_KEY = "exploreease_session";
 
 const Auth = {
-  getUsers() {
+  async signup(name, email, password) {
     try {
-      return JSON.parse(localStorage.getItem(USERS_KEY) || "[]");
-    } catch (error) {
-      return [];
+      const response = await fetch(`${API_BASE_URL}/auth/signup`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.detail || "Signup failed. Please try again.");
+      }
+
+      this.startSession(data.user);
+      return data.user;
+    } catch (err) {
+      if (err.message && err.message.includes("Failed to fetch")) {
+        throw new Error("Unable to reach backend server. Please verify the backend is running.");
+      }
+      throw err;
     }
   },
-  saveUsers(users) {
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
-  },
-  signup(name, email, password) {
-    const users = this.getUsers();
-    const normalizedEmail = email.trim().toLowerCase();
-    if (users.some((user) => user.email === normalizedEmail)) {
-      throw new Error("An account with this email already exists. Please login instead.");
+
+  async login(email, password) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.detail || "Login failed. Please check your credentials.");
+      }
+
+      this.startSession(data.user);
+      return data.user;
+    } catch (err) {
+      if (err.message && err.message.includes("Failed to fetch")) {
+        throw new Error("Unable to reach backend server. Please verify the backend is running.");
+      }
+      throw err;
     }
-    const newUser = {
-      name: name.trim(),
-      email: normalizedEmail,
-      // Demo-only obfuscation, NOT real security. See note above.
-      password: btoa(password),
-    };
-    users.push(newUser);
-    this.saveUsers(users);
-    this.startSession(newUser);
-    return newUser;
   },
-  login(email, password) {
-    const users = this.getUsers();
-    const normalizedEmail = email.trim().toLowerCase();
-    const user = users.find((item) => item.email === normalizedEmail);
-    if (!user || user.password !== btoa(password)) {
-      throw new Error("Incorrect email or password.");
-    }
-    this.startSession(user);
-    return user;
-  },
+
   startSession(user) {
     localStorage.setItem(SESSION_KEY, JSON.stringify({ name: user.name, email: user.email }));
   },
@@ -500,7 +513,7 @@ document.querySelectorAll("[data-switch]").forEach((link) => {
     switchAuthTab(link.dataset.switch);
   });
 });
-loginForm.addEventListener("submit", (event) => {
+loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   loginError.textContent = "";
   const email = document.getElementById("loginEmail").value.trim();
@@ -509,17 +522,25 @@ loginForm.addEventListener("submit", (event) => {
     loginError.textContent = "Enter a valid email and password.";
     return;
   }
+  const submitBtn = loginForm.querySelector("button[type='submit']");
+  const origText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Logging in...";
   try {
-    const user = Auth.login(email, password);
+    const user = await Auth.login(email, password);
     closeAuthModal();
     renderAuthUI();
     renderWelcomeBanner();
     showToast(`Welcome back, ${user.name.split(" ")[0]}!`);
   } catch (error) {
     loginError.textContent = error.message;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = origText;
   }
 });
-signupForm.addEventListener("submit", (event) => {
+
+signupForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   signupError.textContent = "";
   const name = document.getElementById("signupName").value.trim();
@@ -537,14 +558,21 @@ signupForm.addEventListener("submit", (event) => {
     signupError.textContent = "Password must be at least 6 characters.";
     return;
   }
+  const submitBtn = signupForm.querySelector("button[type='submit']");
+  const origText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Creating Account...";
   try {
-    const user = Auth.signup(name, email, password);
+    const user = await Auth.signup(name, email, password);
     closeAuthModal();
     renderAuthUI();
     renderWelcomeBanner();
     showToast(`Welcome to ExploreEase, ${user.name.split(" ")[0]}!`);
   } catch (error) {
     signupError.textContent = error.message;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = origText;
   }
 });
 
