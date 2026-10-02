@@ -1,0 +1,38 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/auth/signup"
+  to = "/.netlify/functions/auth-signup"
+  status = 200
+
+[[redirects]]
+  from = "/auth/login"
+  to = "/.netlify/functions/auth-login"
+  status = 200
+
+[[redirects]]
+  from = "/auth/status"
+  to = "/.netlify/functions/auth-status"
+  status = 200
+
+[[redirects]]
+  from = "/sites"
+  to = "/data/destinations.json"
+  status = 200
+
+[[redirects]]
+  from = "/hotels"
+  to = "/data/hotels.json"
+  status = 200
+
+[[redirects]]
+  from = "/restaurants"
+  to = "/data/restaurants.json"
+  status = 200
+
+[[redirects]]
+  from = "/coupons"
+  to = "/data/coupons.json"
+  status = 200

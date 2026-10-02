@@ -12,14 +12,22 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 
+import re
+
 def get_db_url() -> Optional[str]:
     """Retrieve and normalize the Neon PostgreSQL connection string."""
     url = os.getenv("DATABASE_URL")
     if not url:
         return None
+    url = url.strip().strip("'").strip('"')
     # Fix potential postgres:// scheme to postgresql:// for SQLAlchemy/psycopg compatibility
     if url.startswith("postgres://"):
         url = url.replace("postgres://", "postgresql://", 1)
+    # Remove unsupported channel_binding parameter for psycopg2 / libpq compatibility
+    if "channel_binding=" in url:
+        url = re.sub(r"[&?]channel_binding=[^&]*", "", url)
+        if "?" not in url and "&" in url:
+            url = url.replace("&", "?", 1)
     return url
 
 

@@ -1,0 +1,9 @@
+{
+  "name": "exploreease-smart-tourism",
+  "version": "1.0.0",
+  "description": "ExploreEase Smart Tourism Guide with Netlify Serverless Functions and NeonDB",
+  "main": "script.js",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  }
+}

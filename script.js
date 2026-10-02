@@ -3,7 +3,7 @@ const API_BASE_URL =
   window.location.hostname === "127.0.0.1" ||
   window.location.protocol === "file:"
     ? "http://127.0.0.1:8000"
-    : "https://exploreease-smart-tourism-guide-1.onrender.com";
+    : "";
 const IMG_FALLBACK = "assets/images/placeholder.svg";
 
 let destinations = [];
@@ -183,12 +183,13 @@ async function fetchJson(endpoint) {
 }
 
 async function fetchDestinationDetails(id) {
+  const cached = destinations.find((item) => item.id === id);
+  if (cached) return cached;
   try {
     return await fetchJson(`/sites/${id}`);
   } catch (error) {
     console.error(error);
-    showToast("Unable to load destination details");
-    return destinations.find((item) => item.id === id);
+    return cached;
   }
 }
 
